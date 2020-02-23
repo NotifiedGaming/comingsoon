@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+#bishbashbosh {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    z-index: -1;
+    filter: blur(70px);
+    opacity: 0.9;
+}
+
+#recent {
+    display: flex;
+    justify-content: center;
+}
+
+#recent div {
+    width: 80px;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 35px 10px 0 10px;
+}
+
+#recent div img {
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+    box-shadow: 0 0 55px 25px rgba(0,0,0,0.3);
+}
+
+#recent div h1 {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+#recent div p {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    opacity: 0.7;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: EQ;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/Equinox.otf");
+}
+
+.div {
+    height: 100vh;
+    /* This is what centers it */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: EQ;
+    font-size: 30px;
+    flex-direction: column;
+
+}
+
+.hero h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+            blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #2093ee; }
+}
